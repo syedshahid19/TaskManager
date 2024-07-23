@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+### Technical Documentation for Task Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Table of Contents
+1. Overview
+2. Front-End Implementation
+   - User Interface
+   - Routing
+   - Authentication
+   - Drag-and-Drop Functionality
+   - Modal
+   - Search and sort
+   - Error Handling
+3. Back-End Implementation
+   - Framework
+   - API Development
+   - Data Storage
+   - Validation
+   - Error Handling
+4. Deployment
+5. Conclusion
 
-## Available Scripts
+### 1. Overview
+The task management application is built to help users manage tasks within different columns. It includes functionalities like user authentication, task CRUD operations, and drag-and-drop for task management.
 
-In the project directory, you can run:
+### 2. Front-End Implementation
 
-### `npm start`
+#### User Interface
+- *Library:* React.js
+- *Styling:* Tailwind CSS
+- *Design:* Implemented based on provided mock designs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Routing
+- *Library:* React Router
+- *Implementation:* All pages are protected by authentication checks to ensure that only logged-in users can access them.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Authentication
+- *Library:* JWT (JSON Web Token) for session management, Google OAuth 2.0 for third-party login.
+- *Implementation:* Routes are protected and require a valid JWT token to access.
 
-### `npm test`
+#### Drag-and-Drop Functionality
+- *Library:* React DnD or any preferred drag-and-drop library.
+- *Implementation:* Allows users to move tasks between columns using drag-and-drop.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Back-End Implementation
 
-### `npm run build`
+#### Framework
+- *Framework:* Node.js with Express.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### API Development
+- *Tasks API:*
+  - POST /tasks: Create a new task
+  - GET /tasks: Retrieve all tasks
+  - PUT /tasks/:id: Update a task
+  - DELETE /tasks/:id: Delete a task
+  - PUT /tasks/:id/status: Update the status of a task
+- *User API:*
+  - POST /auth/signup: User registration
+  - POST /auth/login: User login
+  - GET /auth/google: Google login
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Data Storage
+- *Database:* MongoDB
+- *Data Models:*
+  - *User Model:* 
+  - *Task Model:*
+   
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Validation
+- *Server-side validation:* Ensures that tasks have a title and belong to a valid column.
+- *User validation:* Validates user registration and login data.
 
-### `npm run eject`
+#### Error Handling
+- *Error Responses:* Ensures that appropriate error messages and status codes are sent in response to client requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Deployment
+- *Frontend:* Hosted on a platform like Vercel .
+- *Backend:* Deployed on a service like Render.
+- *Database:* MongoDB Atlas for a cloud-based MongoDB instance.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Conclusion
+The task management application provides a robust solution for managing tasks within different columns with authentication and smooth drag-and-drop functionality. The application leverages modern technologies like React, Node.js, Express, and MongoDB to deliver a seamless user experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
