@@ -1,0 +1,63 @@
+1. Clone the Repository
+Open a terminal and navigate to the directory where you want to clone the repository.
+Clone the repository using:
+  git clone https://github.com/syedshahid19/TaskManager
+  
+2. Install Dependencies
+Navigate to the project directory:
+
+cd your-app
+Install dependencies for the server:
+
+Navigate to the server directory (if it's separate):
+
+cd server
+Install dependencies
+npm install
+Install dependencies for the client:
+
+Navigate to the client directory:
+
+cd ../TaskManagerFrontend
+Install dependencies:
+
+npm install
+3. Set Up Environment Variables
+Create a .env file in the root of the server directory (if not already present) with necessary environment variables, such as:
+
+env
+
+PORT = 
+DATABASE_URL = ""
+JWT_SECRET= 
+GOOGLE_CLIENT_ID = ""
+GOOGLE_CLIENT_SECRET=""
+SESSION_SECRET=""
+Configure any additional environment variables required for your application (e.g., API keys, URLs).
+
+4. Start the Application
+Start the server:
+
+Navigate to the server directory:
+
+cd server
+Start the server:
+
+npm start
+Start the client:
+
+Open a new terminal window.
+Navigate to the client directory:
+
+cd client
+Start the client:
+
+npm start
+5. Verify the Application
+Open a web browser and go to http://localhost:3000 (or the port specified in the client setup) to see if the React application is running.
+Ensure the backend API is accessible at http://localhost:5000 (or the port specified in the server setup)
+
+Troubleshooting
+Check logs for any errors in both server and client terminals.
+Ensure MongoDB is running if you're using a local instance.
+Verify all environment variables are correctly set.
