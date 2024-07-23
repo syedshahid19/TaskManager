@@ -53,7 +53,7 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     // Logic for Google login
-    window.location.href = 'http://localhost:4000/auth/google';
+    window.location.href = 'https://taskmanager-oxp2.onrender.com/auth/google';
   };
 
   return (

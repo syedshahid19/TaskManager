@@ -69,7 +69,7 @@ const Signup = () => {
 
   const handleGoogleSignup = () => {
     // Logic for Google signup
-    window.location.href = `http://localhost:4000/auth/google`;
+    window.location.href = `https://taskmanager-oxp2.onrender.com/auth/google`;
   };
 
   return (
